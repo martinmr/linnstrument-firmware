@@ -303,6 +303,11 @@ void performSwitchAssignmentOn(byte whichSwitch, byte assignment, byte split) {
     case ASSIGNED_SEQUENCER_MUTE:
       sequencerToggleMute(split);
       break;
+
+    case ASSIGNED_WHOLETONE_OFFSET:
+      wholetone_offset = ((wholetone_offset == 1) ? -1 : 1);
+      updateDisplay();
+      break;
   }
 }
 
